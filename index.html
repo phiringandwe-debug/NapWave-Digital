@@ -3,9 +3,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NapWave Digital</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -16,11 +16,19 @@
     header {
       background: linear-gradient(to right, #0077cc, #00aaff);
       color: white;
-      padding: 60px 20px;
+      padding: 40px 20px;
       text-align: center;
+      position: relative;
+    }
+    header img {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      height: 50px;
+      width: auto;
     }
     h1 {
-      margin-bottom: 10px;
+      margin: 0 0 10px;
       font-size: 36px;
     }
     h2 {
@@ -32,38 +40,42 @@
       max-width: 700px;
       margin: 0 auto 20px;
     }
-    section {
-      padding: 50px 20px;
-      text-align: center;
+transition: background-color 0.3s ease;
+      z-index: 1000;
     }
-    ul {
-      list-style: none;
-      padding: 0;
+    .whatsapp-btn:hover {
+      background-color: #1ebe57;
     }
-    li {
-      margin: 8px 0;
+    .whatsapp-icon {
+      width: 30px;
+      height: 30px;
+      fill: white;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background-color: #0077cc;
-color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 600;
-    }
-    footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 20px;
+    /* Desktop responsiveness */
+    @media(min-width: 768px) {
+      section {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: left;
+      }
+      ul {
+        max-width: none;
+      }
+      header h1 {
+        font-size: 48px;
+      }
+      .btn {
+        font-size: 20px;
+        padding: 16px 45px;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
+    <!-- Replace the src below with your logo URL or file path -->
+    <img src="https://eu.docworkspace.com/d/sIMHs7N-2ApLQ5skG?lg=en-US&sa=601.1074&ps=1&fn=stream-1324610015.jpeg/150x50?text=Logo" alt="NapWave Logo" />
     <h1>NapWave Digital</h1>
     <p>Catch the wave. Boost your bookings.</p>
   </header>
@@ -76,18 +88,23 @@ color: white;
   <section>
     <h2>Our Services</h2>
     <ul>
-      <li>• Guest Email Campaigns</li>
-      <li>• Loyalty & Re-engagement Emails</li>
-      <li>• Seasonal Promotions</li>
-      <li>• Booking Flow Optimization</li>
+      <li>Guest Email Campaigns</li>
+      <li>Loyalty & Re-engagement Emails</li>
+      <li>Seasonal Promotions</li>
+      <li>Booking Flow Optimization</li>
     </ul>
     <a href="mailto:phiringandwe@gmail.com" class="btn">Contact Us</a>
   </section>
-
-  <footer>
+ <footer>
     <p>&copy; 2025 NapWave Digital. All rights reserved.</p>
   </footer>
 
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/+260770479163" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+    <svg class="whatsapp-icon" viewBox="0 0 24 24">
+      <path d="M20.52 3.48A11.88 11.88 0 0012 0C5.37 0 .01 5.37.01 12a11.9 11.9 0 002.05 6.27L0 24l5.82-2.99a11.88 11.88 0 006.18 1.75h.01c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.28zm-8.53 16.42a9.44 9.44 0 01-4.81-1.38l-.34-.2-3.44 1.77 1.77-3.35-.22-.36a9.44 9.44 0 011.38-4.8c.23-.39.49-.38.67-.38a.98.98 0 01.69.48c.2.39.71 1.2.77 1.29a.5.5 0 01-.1.76l-.15.14a.41.41 0 00-.16.25c-.02.1 0 .18.07.28.15.23.59.94.89 1.28a.56.56 0 01.02.68c-.02.03-.15.22-.23.35-.08.12-.17.15-.3.22a1.1 1.1 0 00-.41.36c-.02.04-.03.07-.05.11-.02.04-.04.08-.06.12-.03.07-.01.14.04.2.04.06.19.32.43.55.29.29.54.38.63.43.24.12.39.11.53.07.16-.05.49-.2.56-.39.06-.18.06-.33.04-.36-.03-.03-.07-.05-.13-.08z"/>
+    </svg>
+  </a>
+
 </body>
 </html>
-```
